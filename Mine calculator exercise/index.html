@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Calculator Exercise</title>
+        <link href="main.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src= "main.js"></script>
+    </head>
+
+    <body>
+      <!-- Body of the calculator -->
+      <div id="calBody_1">
+        <!-- Screen display -->
+        <div id="calScreen_2">
+          <input type="text" id="screen">
+          <input type="text" id="history" disabled>
+        </div>
+        <div id="btnBox_3">
+
+            <!-- Fifth row of buttons -->
+            <button class="mathKeys" id="clearBtn" value="c" onclick="clearEntry('c')">C</button>
+            <button class="mathKeys" id="plus-minus" value="-" onclick="mathOp()">&plusmn;</button>
+            <button class="mathKeys" id="remainder" value="%" onclick="mathOp('%')">%</button>
+            <button class="mathKeys" id="backspace" onclick="mathOp('')">&#8592;</button>
+            <br>
+
+            <!-- First row of buttons -->
+            <button class="mathKeys" id="division" value="/" onclick="mathOp('/')">&divide;</button>
+            <button id="numKeys" value="1" onclick="addNumber(1)">1</button>
+            <button id="numKeys" value="2"onclick="addNumber(2)">2</button>
+            <button id="numKeys" value="3"onclick="addNumber(3)">3</button>
+            <br>
+
+            <!-- Second row of buttons -->
+
+            <button class="mathKeys" id="multiply" value="*" onclick="mathOp('*')">&#42;</button>
+            <button id="numKeys" value="4" onclick="addNumber(4)">4</button>
+            <button id="numKeys" value="5" onclick="addNumber(5)">5</button>
+            <button id="numKeys" value="6" onclick="addNumber(6)">6</button>
+            <br>
+
+            <!-- Third row of buttons -->
+
+            <button class="mathKeys" id="plus" value="+" onclick="mathOp('+')">&#43;</button>
+            <button id="numKeys" value="7" onclick="addNumber(7)">7</button>
+            <button id="numKeys" value="8" onclick="addNumber(8)">8</button>
+            <button id="numKeys" value="9" onclick="addNumber(9)">9</button>
+            <br>
+
+            <!-- Fourth row of buttons -->
+
+            <button class="mathKeys" id="substract" value="-" onclick="mathOp('-')">&minus;</button>
+            <button id="numZero" value="0" onclick="addNumber(0)">0</button>
+            <button class="mathKeys" id="decimal" value="." onclick="addNumber('.')">.</button>
+            <br>
+
+            <button id="equalKey" value="=" onclick="getAnswer()">&#61;</button>
+
+
+        </div>
+      </div>
+
+
+    </body>
+</html>
