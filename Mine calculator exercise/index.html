@@ -13,8 +13,8 @@
       <div id="calBody_1">
         <!-- Screen display -->
         <div id="calScreen_2">
-          <input type="text" id="screen">
-          <input type="text" id="history" disabled>
+          <input type="text" id="screen" placeholder="0" disabled>
+          <input type="text" id="history" placeholder="0" disabled>
         </div>
         <div id="btnBox_3">
 
@@ -22,7 +22,7 @@
             <button class="mathKeys" id="clearBtn" value="c" onclick="clearEntry('c')">C</button>
             <button class="mathKeys" id="plus-minus" value="-" onclick="mathOp()">&plusmn;</button>
             <button class="mathKeys" id="remainder" value="%" onclick="mathOp('%')">%</button>
-            <button class="mathKeys" id="backspace" onclick="mathOp('')">&#8592;</button>
+            <button class="mathKeys" id="backspace" onclick="backspace()">&#8592;</button>
             <br>
 
             <!-- First row of buttons -->
@@ -34,7 +34,7 @@
 
             <!-- Second row of buttons -->
 
-            <button class="mathKeys" id="multiply" value="*" onclick="mathOp('*')">&#42;</button>
+            <button class="mathKeys" id="multiply" value="*" onclick="mathOp('*')">x</button>
             <button id="numKeys" value="4" onclick="addNumber(4)">4</button>
             <button id="numKeys" value="5" onclick="addNumber(5)">5</button>
             <button id="numKeys" value="6" onclick="addNumber(6)">6</button>

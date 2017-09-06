@@ -7,10 +7,13 @@
 // var calScreen = document.getElementById('screen');
 // var calHistory = document.getElementById('history');
 
+// var screenEntry = document.getElementById('screen');
+// var entryValue = screenEntry.value;
 
 function addNumber(entry){
   //screenEntry must be local. It doesn't work outside the function.*
   var screenEntry = document.getElementById('screen');
+  var calHistory = document.getElementById('history');
 
   switch(entry){
     case 1: screenEntry.value += '1'; break;
@@ -46,6 +49,15 @@ function clearEntry(clear){
   if (clear === 'c'){
     screenEntry.value='';
   }
+}
+
+function backspace(){
+  var screenEntry = document.getElementById('screen');
+
+  var number = screenEntry.value;
+  var length = number.length - 1;
+  var deletEntry = number.substring(0,length);
+  screenEntry.value = deletEntry;
 }
 
 function getAnswer(){
