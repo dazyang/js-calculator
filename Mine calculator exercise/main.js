@@ -28,10 +28,27 @@ function addNumber(entry){
     case 0: screenEntry.value += '0'; break;
     case '.': screenEntry.value += '.'; break;
   }
+
+  switch(entry){
+    case 1: calHistory.value += '1'; break;
+    case 2: calHistory.value += '2'; break;
+    case 3: calHistory.value += '3'; break;
+    case 4: calHistory.value += '4'; break;
+    case 5: calHistory.value += '5'; break;
+    case 6: calHistory.value += '6'; break;
+    case 7: calHistory.value += '7'; break;
+    case 8: calHistory.value += '8'; break;
+    case 9: calHistory.value += '9'; break;
+    case 0: calHistory.value += '0'; break;
+    case '.': calHistory.value += '.'; break;
+  }
+
+
 }
 
 function mathOp(operation){
   var screenEntry = document.getElementById('screen');
+  var calHistory = document.getElementById('history');
 
   switch (operation) {
     case '/': screenEntry.value += '/'; break;
@@ -40,15 +57,29 @@ function mathOp(operation){
     case '-': screenEntry.value += '-'; break;
     case '%': screenEntry.value += '%'; break;
   }
+
+  switch (operation) {
+    case '/': calHistory.value += '/'; break;
+    case '*': calHistory.value += '*'; break;
+    case '+': calHistory.value += '+'; break;
+    case '-': calHistory.value += '-'; break;
+    case '%': calHistory.value += '%'; break;
+  }
 }
 
 function clearEntry(clear){
   var screenEntry = document.getElementById('screen');
+  var calHistory = document.getElementById('history');
 
   screenEntry.value = clear;
   if (clear === 'c'){
-    screenEntry.value='';
+    screenEntry.value = '';
   }
+  calHistory.value = clear;
+  if (clear === 'c'){
+    calHistory.value = '';
+  }
+
 }
 
 function backspace(){
